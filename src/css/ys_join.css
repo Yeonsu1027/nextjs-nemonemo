@@ -1,0 +1,14 @@
+.join_link {
+  /* border: 1px solid red; */
+  text-align: center;
+  font-weight: bold;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  line-height: 18px;
+  border: 2px solid #ddd;
+  font-weight: 300;
+  padding: 5px;
+}

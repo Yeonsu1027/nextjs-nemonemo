@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model tbl_clear {
+  c_id    String @db.VarChar(20)
+  c_level Int
+  c_clear Int?
+
+  @@id([c_id, c_level])
+}
+
+model tbl_members {
+  m_id   String  @id @db.VarChar(20)
+  m_pw   String  @db.VarChar(125)
+  m_nick String? @db.VarChar(20)
+}
+
+model tbl_nemo {
+  n_num     Int
+  n_row_num Int
+  n_block1  Int?
+  n_block2  Int?
+  n_block3  Int?
+  n_block4  Int?
+  n_block5  Int?
+  n_block6  Int?
+  n_block7  Int?
+  n_block8  Int?
+  n_block9  Int?
+  n_block10 Int?
+  n_block11 Int?
+  n_block12 Int?
+  n_block13 Int?
+  n_block14 Int?
+  n_block15 Int?
+
+  @@id([n_num, n_row_num])
+}
+
+model tbl_nemo_play {
+  p_id      String @db.VarChar(20)
+  p_num     Int
+  p_row_num Int
+  p_block1  Int?
+  p_block2  Int?
+  p_block3  Int?
+  p_block4  Int?
+  p_block5  Int?
+  p_block6  Int?
+  p_block7  Int?
+  p_block8  Int?
+  p_block9  Int?
+  p_block10 Int?
+  p_block11 Int?
+  p_block12 Int?
+  p_block13 Int?
+  p_block14 Int?
+  p_block15 Int?
+
+  @@id([p_id, p_num, p_row_num])
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model tbl_speech {
+  s_num     Int @id
+  s_speaker String? @db.VarChar(1)
+  s_message String? @db.VarChar(100)
+
+  
+}

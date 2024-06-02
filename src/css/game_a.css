@@ -1,0 +1,15 @@
+.input_box {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  input {
+    width: 30px;
+    height: 30px;
+  }
+  input:checked {
+    background-color: black;
+  }
+}
+input[type="checkbox"]:checked {
+  background-color: black;
+}
